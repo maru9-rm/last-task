@@ -1,0 +1,6 @@
+show
+.countainer
+    = @user.user_name
+    = @user.email
+    = image_tag @user.profile.avatar, class: 'avatar-image'
+= link_to 'edit', edit_profile_path

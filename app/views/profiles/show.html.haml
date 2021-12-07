@@ -1,6 +1,16 @@
-show
 .countainer
-    = @user.user_name
-    = @user.email
-    = image_tag @user.profile.avatar, class: 'avatar-image'
-= link_to 'edit', edit_profile_path
+    .user-name
+        = @user.user_name
+
+
+
+    .avatar-wrapper
+        = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+            %div
+                = f.label :avatar, 'アバター' do
+                    = image_tag @user.profile.avatar, class: 'avatar-image', class: "avatar-image center-position"
+            %div
+                = f.file_field :avatar ,class: "hidden uploader"
+    
+            = f.submit '決定', class: 'btn-primary hidden submit-botton'
+                

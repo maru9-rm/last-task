@@ -5,8 +5,23 @@
 
 
 
-
+.user-name {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
 
 .avatar-image {
-    width: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 999px;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.avatar-wrapper {
+    text-align: center;
 }

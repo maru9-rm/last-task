@@ -27,6 +27,7 @@ gem 'devise'
 gem 'hamlit'
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'annotate'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

@@ -1,4 +1,4 @@
-.block {
+.article {
     width: 100%;
     color: green;
     margin-bottom: 40px;
@@ -6,4 +6,14 @@
     &-image{
         width: 100%;
     }
+
+    &_heart {
+        display: inline;
+    }
+
+}
+
+
+.hidden {
+    display: none;
 }

@@ -1,0 +1,22 @@
+.container
+  %ul
+    - @article.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: @article, local: true) do |f|
+    %header.header
+      = link_to 'cancel', :back
+      Status
+      = f.submit 'post', class: 'btn-primary'
+    
+    .header-user-info
+      = image_tag current_user.profile.avatar, class: 'avatar-image-mini'
+      = current_user.user_name
+    %div
+      = f.label :content, '内容'
+    %div
+      = f.text_area :content
+    %div
+      = f.label :images, '画像'
+    %div
+      = f.file_field :images , multiple: true
+    

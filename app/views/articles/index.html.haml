@@ -1,0 +1,27 @@
+.container
+  %header.header
+    - if user_signed_in?
+      = link_to 'トップページ', root_path
+      = link_to 'プロフィール', profile_path
+      = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
+
+
+  = link_to 'new article', new_article_path
+
+  - @articles.each do |article|
+    .block
+      = image_tag article.user.profile.avatar, class: 'avatar-image-mini'
+      .user-info
+        = article.user.user_name
+        = article.created_at
+      - article.images.each do |image|
+        = image_tag image, class: 'block-image'
+      .action-buttons
+        = link_to '#' do 
+          =image_tag 'inactive-heart'
+        = link_to '#' do 
+          =image_tag 'comment-button'
+        = link_to  "https://twitter.com/share?url=#{request.url}&text=#{article.content}" do
+          =image_tag 'share-button'
+      = article.content
+

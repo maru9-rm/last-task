@@ -1,6 +1,8 @@
 @import 'header';
 @import 'article';
 @import 'comment';
+@import 'login';
+@import 'button';
 
 html {
     word-spacing: 1px;
@@ -35,7 +37,9 @@ html {
     width: 100%;
   }
   
-
+  textarea {
+    width: 100%;
+}
 
 
 
@@ -66,4 +70,56 @@ html {
 
 .avatar-wrapper {
     text-align: center;
+}
+
+.alert {
+  width: 100%;
+  background-color: whitesmoke;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  float: left;
+  position: absolute;
+  z-index: 999;
+
+  -webkit-animation: fade-in-out;
+  animation: fade-in-out;
+  visibility: hidden;
+  animation-duration: 5s;
+
+}
+
+
+@-webkit-keyframes fade-in-out {
+0% {
+  visibility: visible;
+  opacity: 1;
+}
+
+50% {
+  visibility: visible;
+  opacity: 1;
+}
+
+100% {
+  visibility: hidden;
+  opacity: 0;
+}
+}
+
+@keyframes fade-in-out {
+0% {
+  visibility: visible;
+  opacity: 1;
+}
+
+50% {
+  visibility: visible;
+  opacity: 1;
+}
+
+100% {
+  visibility: hidden;
+  opacity: 0;
+}
 }

@@ -6,8 +6,9 @@ $header-padding-y: 16px;
 .header {
     display: flex;
     justify-content: space-between;
-    padding: $header-padding-y 16px;
+    padding: $header-padding-y 5px;
     font-weight: bold;
+    line-height: 24px;
 
     &_avatar {
         width: $avatar-size;

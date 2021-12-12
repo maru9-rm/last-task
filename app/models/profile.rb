@@ -12,6 +12,9 @@
 #  index_profiles_on_user_id  (user_id)
 #
 class Profile < ApplicationRecord
+    include Rails.application.routes.url_helpers
+
     has_one_attached :avatar
     belongs_to :user
+    
 end

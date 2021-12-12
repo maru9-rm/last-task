@@ -21,7 +21,7 @@
           = image_tag 'active-heart'
         .article_heart.hidden.inactive-heart{id: "inactive-heart#{article.id}", data: {article_id: article.id}}
           = image_tag 'inactive-heart'        
-        = link_to '#' do 
+        = link_to new_article_comment_path(article) do 
           =image_tag 'comment-button'
         = link_to  "https://twitter.com/share?url=#{request.url}&text=#{article.content}" do
           =image_tag 'share-button'

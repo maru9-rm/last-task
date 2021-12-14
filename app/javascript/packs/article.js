@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 $(`#active-heart${articleId}`).on('click', () => {
-    window.alert('赤いハートを押した→赤いハートが消える')
     axios.delete(`/articles/${articleId}/like`)
       .then((response) => {
         if (response.data.status === 'ok') {
@@ -37,7 +36,6 @@ $(`#active-heart${articleId}`).on('click', () => {
 })
 
 $(`#inactive-heart${articleId}`).on('click', () => {
-      window.alert('白いハートを押した→白いハートが消える')
     axios.post(`/articles/${articleId}/like`)
       .then((response) => {
         if (response.data.status === 'ok') {

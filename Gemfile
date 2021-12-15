@@ -30,6 +30,7 @@ gem 'binding_of_caller'
 gem 'annotate'
 gem 'active_model_serializers'
 gem 'sidekiq'
+gem 'mentionable'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

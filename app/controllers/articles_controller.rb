@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @articles = Article.all
+        @articles = Article.all.order(id: "DESC")
     end
 
     def new

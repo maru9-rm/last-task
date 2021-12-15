@@ -1,0 +1,30 @@
+.count {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+
+
+    &_post {
+        width: 100px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &_follower {
+        width: 100px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &_following {
+        width: 100px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &_label {
+        color:#9b9b9b;
+        font-size: 16px;
+    }
+}

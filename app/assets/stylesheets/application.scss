@@ -3,6 +3,9 @@
 @import 'comment';
 @import 'login';
 @import 'button';
+@import 'profile';
+
+
 
 html {
     word-spacing: 1px;
@@ -54,6 +57,7 @@ html {
     width: 200px;
     height: 200px;
     border-radius: 999px;
+
 
     &-mini {
         width: 40px;

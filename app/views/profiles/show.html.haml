@@ -1,9 +1,11 @@
 .container
     %header.header
-        = link_to '←', root_path
-        Profile
-        %div
-            　        
+        .header_item.header_item_left
+            = link_to '⬅︎', root_path
+        .header_item
+            My Profile
+        .header_item.header_item_right
+            edit        
     .user-name
         = @user.user_name
 
@@ -13,9 +15,12 @@
         = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
             %div
                 = f.label :avatar, 'アバター' do
-                    = image_tag @user.profile.avatar, class: 'avatar-image', class: "avatar-image center-position"
+                    = image_tag @user.avatar_image, class: 'avatar-image', class: "avatar-image center-position"
             %div
                 = f.file_field :avatar ,class: "hidden uploader"
     
             = f.submit '決定', class: 'btn-primary hidden submit-botton'
-                
+
+
+    = render 'commons/profile', user: current_user
+        

@@ -5,7 +5,7 @@ $header-padding-y: 16px;
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     padding: $header-padding-y 5px;
     font-weight: bold;
     line-height: 24px;
@@ -16,4 +16,19 @@ $header-padding-y: 16px;
         border-radius: 100%;
     }
     
+    &_item {
+        width: 100px;
+        text-align: center;
+
+        &_left {
+            text-align: left;
+        }
+
+        &_right {
+            text-align: right;
+        }
+
+
+    }
+
 }

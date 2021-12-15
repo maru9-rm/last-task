@@ -11,7 +11,8 @@
   - @articles.each do |article|
     .article.article-show{data: {article_id: article.id}}
       .article_user_info
-        = image_tag article.user.profile.avatar, class: 'avatar-image-mini'
+        = link_to account_path(article.user) do
+          = image_tag article.user.avatar_image, class: 'avatar-image-mini'
         .user-info
           %p= article.user.user_name
           %p= article.created_at

@@ -9,7 +9,7 @@
       = f.submit 'post', class: 'btn-primary'
     
     .header-user-info
-      = image_tag current_user.profile.avatar, class: 'avatar-image-mini'
+      = image_tag current_user.avatar_image, class: 'avatar-image-mini'
       = current_user.user_name
     %div
       = f.label :content, '内容'

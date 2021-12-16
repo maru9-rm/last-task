@@ -4,10 +4,11 @@
         .count_label
             Post
     .count_follower
-        45
+        %p#follower_count{ data: {follower_count: user.follower_relationships.count}}
+            = user.follower_relationships.count 
         .count_label
             Follower
     .count_following
-        78
+        = user.following_relationships.count
         .count_label
             Following

@@ -54,9 +54,11 @@ html {
 }
 
 .avatar-image {
+    margin: 20px;
     width: 200px;
     height: 200px;
     border-radius: 999px;
+    box-shadow: 0 0 0 8px #fff, 0 0 0 12px grey;
 
 
     &-mini {

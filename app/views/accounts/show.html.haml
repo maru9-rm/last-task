@@ -1,9 +1,19 @@
 .container
     %header.header
-        = link_to '←', root_path
-        Profile
-        %div
-            　        
+        .header_item.header_item_left
+            = link_to '⬅︎', root_path
+        .header_item
+            Profile
+        .header_item.header_item_right#account-show{data: {account_id: @user.id , relationship_id: @relationship_id}}
+            .follow_button.hidden
+                Follow
+
+            .unfollow_button.hidden
+                Unfollow
+
+        
+                
+        
     .user-name
         = @user.user_name
 
@@ -14,3 +24,7 @@
 
 
     = render 'commons/profile', user: @user
+
+
+
+= javascript_pack_tag 'follow'

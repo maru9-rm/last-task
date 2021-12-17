@@ -6,14 +6,9 @@
             Profile
         .header_item.header_item_right#account-show{data: {account_id: @user.id , relationship_id: @relationship_id}}
             .follow_button.hidden
-                Follow
-
+                %button.tag( data-content-default="Follow" data-content-spinning="Follow" )
             .unfollow_button.hidden
-                Unfollow
-
-        
-                
-        
+                %button.tag( data-content-default="Unfollow" data-content-spinning="Unfollow" )
     .user-name
         = @user.user_name
 

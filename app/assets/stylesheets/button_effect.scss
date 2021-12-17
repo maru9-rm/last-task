@@ -1,0 +1,39 @@
+.tag {
+    padding: 0;
+    position: relative;
+    display: block;
+    font-weight: bold;;
+    font-size: 16px;
+    color: #c0c0c0;
+    background-color: #FFF;
+    border: none;
+    outline: none;
+    width: 100px;
+    text-align: right;
+    line-height: 24px;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+      
+      &:before {
+      content: attr( data-content-default );  }
+      
+      &:active {
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing;
+      animation: spinner 200ms infinite linear;
+        
+        &:before {
+        content: attr( data-content-spinning ); }
+      }
+    }
+    
+    
+    @keyframes spinner {
+      from {
+      transform: rotateX( 0 ) rotateY( -360deg ); }
+      
+      to {
+      transform: rotateX( 360deg ) rotateY( -360deg ); }
+    }

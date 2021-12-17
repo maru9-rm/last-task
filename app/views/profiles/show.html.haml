@@ -22,7 +22,22 @@
             = f.submit '決定', class: 'btn-primary hidden submit-botton'
 
 
-    = render 'commons/profile', user: current_user
-        
+    .count
+        .count_post
+            = @user.articles.count
+            .count_label
+                Post
+        = link_to profile_my_follower_path(@user) do        
+            .count_follower
+                %p#follower_count{ data: {follower_count: @user.follower_relationships.count}}
+                    = @user.follower_relationships.count 
+                .count_label
+                    Follower
+        = link_to profile_my_following_path(@user) do
+            .count_following
+                = @user.following_relationships.count
+                .count_label
+                    Following
+    
 
 = javascript_pack_tag 'profile'

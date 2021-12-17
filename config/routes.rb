@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'articles#index'
 
-  resource :profile, only: [:show, :edit, :update]
+  resource :profile, only: [:show, :edit, :update] do
+    resource :my_follower, only: [:show]
+    resource :my_following, only: [:show]
+  end
   
   resources :articles do
     resources :comments, only: [:index, :new, :create]
@@ -18,6 +21,8 @@ Rails.application.routes.draw do
   resources :accounts, only: [:show] do
     resources :follows, only: [:create, :show]
     resources :unfollows, only: [:create]
+    resource :follower, only: [:show]
+    resource :following, only: [:show]
   end
 
 end

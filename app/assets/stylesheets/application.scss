@@ -44,8 +44,21 @@ html {
     width: 100%;
 }
 
+.flex_box {
+  display: flex;
+}
 
+.follower {
+  padding: 20px;
+  border-bottom: 1px solid #e8e8e8 ;
 
+  &_info {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 48px;
+  }
+
+}
 
 .user-name {
     text-align: center;
@@ -66,6 +79,7 @@ html {
         height: 40px;
         border-radius: 100%;
         margin: 4px;
+        margin-right: 10px;
     }
 
 }

@@ -1,0 +1,15 @@
+.container
+    %header.header
+        .header_item.header_item_left
+            = link_to '⬅︎', :back
+        .header_item
+            Follower
+        .header_item.header_item_right
+
+
+- @followers.each do |follower|
+    .follower.flex_box
+        = link_to account_path(follower) do
+            = image_tag follower.avatar_image, class: 'avatar-image-mini'
+        .follower_info
+            = follower.user_name

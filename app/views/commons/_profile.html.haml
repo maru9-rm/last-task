@@ -3,12 +3,14 @@
         = user.articles.count
         .count_label
             Post
-    .count_follower
-        %p#follower_count{ data: {follower_count: user.follower_relationships.count}}
-            = user.follower_relationships.count 
-        .count_label
-            Follower
-    .count_following
-        = user.following_relationships.count
-        .count_label
-            Following
+    = link_to account_follower_path(user) do        
+        .count_follower
+            %p#follower_count{ data: {follower_count: user.follower_relationships.count}}
+                = user.follower_relationships.count 
+            .count_label
+                Follower
+    = link_to account_following_path(user) do
+        .count_following
+            = user.following_relationships.count
+            .count_label
+                Following

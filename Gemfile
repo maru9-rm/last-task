@@ -40,6 +40,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rubocop-rails'
   gem 'pry-byebug'
+  gem 'faker'
 end
 
 group :development do

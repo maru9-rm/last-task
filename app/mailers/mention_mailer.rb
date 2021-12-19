@@ -1,7 +1,8 @@
 class MentionMailer < ApplicationMailer
-    def at_mark(user)
+    def at_mark(user,commenter)
         @user = user
-        mail to: user.email, subject: '【お知らせ】@mentionされました'
+        @commenter = commenter
+        mail to: user.email, subject: '【お知らせ】メンションされました！'
     end
 
 end

@@ -7,7 +7,6 @@
 
   .new_article_button
     = link_to 'new article', new_article_path
-
   
   - @articles.each do |article|
     .article.article-show{data: {article_id: article.id}}

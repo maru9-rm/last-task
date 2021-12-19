@@ -8,6 +8,7 @@
   .new_article_button
     = link_to 'new article', new_article_path
 
+  
   - @articles.each do |article|
     .article.article-show{data: {article_id: article.id}}
       .article_user_info
@@ -18,17 +19,20 @@
           %p= article.created_at
       - article.images.each do |image|
         = image_tag image, class: 'article-image'
-      .action-buttons
-        .article_heart.hidden.active-heart{id: "active-heart#{article.id}", data: {article_id: article.id}}
-          = image_tag 'active-heart'
-        .article_heart.hidden.inactive-heart{id: "inactive-heart#{article.id}", data: {article_id: article.id}}
-          = image_tag 'inactive-heart'        
-        = link_to new_article_comment_path(article) do 
-          =image_tag 'comment-button'
-        = link_to  "https://twitter.com/share?url=#{request.url}&text=#{article.content}" do
-          =image_tag 'share-button'
+      .action_buttons
+        .article_heart.wrapper.action_buttons_item
+          .article_heart.hidden.active-heart{id: "active-heart#{article.id}", data: {article_id: article.id}}
+            = image_tag 'active-heart'
+          .article_heart.hidden.inactive-heart{id: "inactive-heart#{article.id}", data: {article_id: article.id}}
+            = image_tag 'inactive-heart'
+          = article.likes.count
+        .article_comment.wrapper.action_buttons_item
+          = link_to new_article_comment_path(article) do 
+            =image_tag 'comment-button'
+        .action_buttons_item
+          = link_to  "https://twitter.com/share?url=#{request.url}&text=#{article.content}" do
+            =image_tag 'share-button'
       = article.content
-
 
 
 = javascript_pack_tag 'article'

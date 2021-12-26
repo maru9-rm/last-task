@@ -1,5 +1,5 @@
+= image_tag 'login-page-top-view.png', class: 'top-view-image'
 .container
-  %h2 Log in
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field.login_form
       = f.label :email
@@ -9,11 +9,8 @@
       = f.label :password
       %br/
       = f.password_field :password, autocomplete: "current-password", class: "form_area"
-    - if devise_mapping.rememberable?
-      .field
-        = f.check_box :remember_me
-        = f.label :remember_me
+    .links
+      = render "devise/shared/links"
     .actions
       = f.submit "Log in" , class: "button submit_button"
-  .links
-    = render "devise/shared/links"
+

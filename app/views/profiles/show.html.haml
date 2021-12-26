@@ -2,14 +2,11 @@
     %header.header
         .header_item.header_item_left
             = link_to '⬅︎', root_path
-        .header_item
-            My Profile
+        .header_item.user-name
+            = @user.user_name
         .header_item.header_item_right
-            edit        
-    .user-name
-        = @user.user_name
-
-
+    
+        
 
     .avatar-wrapper
         = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
@@ -19,7 +16,7 @@
             %div
                 = f.file_field :avatar ,class: "hidden uploader"
     
-            = f.submit '決定', class: 'btn-primary hidden submit-botton'
+            = f.submit 'ICON CHANGE', class: 'button hidden submit-button'
 
 
     .count
@@ -39,5 +36,12 @@
                 .count_label
                     Following
     
+
+
+    .article-images
+        - current_user.articles.each do |article|
+            - article&.images.each do |image|
+                .image-wrapper
+                    = image_tag image, class: 'article-image'
 
 = javascript_pack_tag 'profile'

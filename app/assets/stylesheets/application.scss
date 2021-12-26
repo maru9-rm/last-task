@@ -60,18 +60,12 @@ html {
 
 }
 
-.user-name {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-}
-
 .avatar-image {
     margin: 20px;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 999px;
-    box-shadow: 0 0 0 8px #fff, 0 0 0 12px grey;
+    box-shadow: 0 0 0 5px #fff, 0 0 0 8px grey;
 
 
     &-mini {
@@ -90,6 +84,11 @@ html {
 
 .avatar-wrapper {
     text-align: center;
+}
+
+
+.margin_top {
+  margin-top: 30px;
 }
 
 .alert {
@@ -142,4 +141,18 @@ html {
   visibility: hidden;
   opacity: 0;
 }
+}
+
+#error_explanation {
+  position: absolute;
+  z-index: 999;
+  top: 80px;
+  color: #fff;
+  opacity: 0.7;
+
+  ul {
+    margin-top: 10px;
+    list-style: none;
+    line-height: 30px;
+  }
 }

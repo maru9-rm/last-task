@@ -1,19 +1,20 @@
 .container#article-show{data: {article_id: @article.id}}
 
     %header.header
-        = link_to '←', root_path
-        Comment
-        %div
-            　
+        .header_item.header_item_left
+            = link_to '←', root_path
+        .header_item
+            Comment
+        .header_item
     .comments-container
   
 
-    .btn-secondary.show-comment-form
-        コメントを追加
-    .comment-text-area.hidden
-        = text_area_tag :comment_content, '', class: 'sm'
+    .btn-secondary.show-comment-form.margin_top
+        + New Comment
+    .comment-text-area.hidden.margin_top
+        = text_area_tag :comment_content, '', class: 'sm form_area'
         .btn-secondary.add-comment-button
-            コメントを追加
+            + New Comment
   
 
 = javascript_pack_tag 'comment'

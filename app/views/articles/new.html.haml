@@ -8,15 +8,14 @@
       Status
       = f.submit 'post', class: 'btn-primary'
     
-    .header-user-info
+    .article_user_info.margin_top
       = image_tag current_user.avatar_image, class: 'avatar-image-mini'
-      = current_user.user_name
+      .user_info
+        = current_user.user_name
+    %div.margin_top
+      = f.text_area :content, class: "form_area", placeholder: "What's on your mind?"
     %div
-      = f.label :content, '内容'
+      = f.label :images, '+ Album', class: 'file_field'
     %div
-      = f.text_area :content
-    %div
-      = f.label :images, '画像'
-    %div
-      = f.file_field :images , multiple: true
+      = f.file_field :images , multiple: true, class: 'hidden'
     

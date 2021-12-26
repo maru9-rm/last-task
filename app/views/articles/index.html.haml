@@ -14,8 +14,8 @@
         = link_to account_path(article.user) do
           = image_tag article.user.avatar_image, class: 'avatar-image-mini'
         .user-info
-          %p= article.user.user_name
-          %p= article.created_at
+          = article.user.user_name
+          %p= article.display_created_at
       - article.images.each do |image|
         = image_tag image, class: 'article-image'
       .action_buttons
@@ -24,7 +24,7 @@
             = image_tag 'active-heart'
           .article_heart.hidden.inactive-heart{id: "inactive-heart#{article.id}", data: {article_id: article.id}}
             = image_tag 'inactive-heart'
-          = article.likes.count
+          -# = article.likes.count
         .article_comment.wrapper.action_buttons_item
           = link_to new_article_comment_path(article) do 
             =image_tag 'comment-button'

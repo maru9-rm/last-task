@@ -15,6 +15,11 @@
         display: flex;
         margin-bottom: 10px;
         font-weight: bold;
+
+        p {
+            color: #9e9e9e;
+            font-weight: normal;
+        }
         
     }
 
@@ -63,4 +68,35 @@
         margin-right: 10px;
     }
 
+}
+
+
+textarea::placeholder { 
+    color:#9e9e9e;
+}
+
+.btn-primary {
+    text-decoration: none;
+    background-color: #fff;
+    border: none;
+    color: #BDBDBD;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.user_info {
+    line-height: 48px;
+}
+
+.file_field {
+    display: block;
+    background-color: #fff;
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    border: 1px solid #E0E0E0;
+    padding-top: 2px;
+    text-decoration: none;
+    text-align: center;
 }

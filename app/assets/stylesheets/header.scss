@@ -4,6 +4,7 @@ $avatar-size: 40px;
 $header-padding-y: 16px;
 
 .header {
+    margin-top: 10px;
     display: flex;
     justify-content:space-between;
     padding: $header-padding-y 5px;
@@ -31,4 +32,11 @@ $header-padding-y: 16px;
 
     }
 
+}
+
+.user-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    width: 180px;
 }

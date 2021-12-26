@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
         const image = reader.result;
         document.querySelector('.avatar-image').setAttribute('src', image);
       }
-      $('.submit-botton').removeClass('hidden')
+      $('.submit-button').removeClass('hidden')
 
     });
 });

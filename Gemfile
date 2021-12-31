@@ -41,6 +41,8 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'pry-byebug'
   gem 'faker'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -53,6 +55,7 @@ group :development do
   gem 'erb2haml'
   gem 'letter_opener'
   gem 'letter_opener_web', '~> 1.0'
+  
 end
 
 group :test do

@@ -24,7 +24,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :user_name, presence: true
-  validates :user_name, length: { maximum: 10 }
+  # validates :user_name, length: { maximum: 10 }
   validates :email, presence: true
 
   has_one :profile, dependent: :destroy

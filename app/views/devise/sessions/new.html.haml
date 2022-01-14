@@ -4,11 +4,11 @@
     .field.login_form
       = f.label :email
       %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email", class: "form_area"
+      = f.email_field :email, autofocus: true, class: "form_area"
     .field
       = f.label :password
       %br/
-      = f.password_field :password, autocomplete: "current-password", class: "form_area"
+      = f.password_field :password, class: "form_area"
     .links
       = render "devise/shared/links"
     .actions

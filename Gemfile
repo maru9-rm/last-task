@@ -31,6 +31,7 @@ gem 'annotate'
 gem 'active_model_serializers'
 gem 'sidekiq'
 gem 'mentionable'
+gem 'aws-sdk-s3', require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -43,6 +44,7 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'dotenv-rails'
 end
 
 group :development do

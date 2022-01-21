@@ -3,7 +3,7 @@
     "description": "This is blogapp",
     "keywords": [],
     "website": "",
-    "repository": "自分のレポジトリを指定！　例：https://github.com/cohki0305/blogapp",
+    "repository": "https://github.com/maru9-rm/last-task",
     "env": {},
     "addons": [
       "heroku-postgresql:hobby-dev"
